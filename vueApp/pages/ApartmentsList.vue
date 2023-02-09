@@ -29,9 +29,9 @@ import Button from '../components/Button.vue'
         onMounted(() => {
     console.log("check")
 
-    data.value = JSON.parse(localStorage.getItem('items'))
-    if (!data) {
-        const data = [
+    // data.value = JSON.parse(localStorage.getItem('items'))
+    // if (!data) {
+       data.value = [
             {
                 aid: 1,
                 image: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -78,7 +78,6 @@ import Button from '../components/Button.vue'
                 inventory: []
             }
         ]
-      }
     })
     const handleClick = (id) => {
         navigateTo('/apartments/' + id)
