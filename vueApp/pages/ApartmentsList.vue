@@ -31,10 +31,55 @@ import Button from '../components/Button.vue'
 
     data.value = JSON.parse(localStorage.getItem('items'))
     if (!data) {
-      localStorage.setItem("items", JSON.stringify(apartments))
+        const data = [
+            {
+                aid: 1,
+                image: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                address: "Bishan Park, Block 15",
+                floor: "3rd Floor",
+                door: "Unit: #03-88",
+                inventory: [
+            {
+               "name": "fridge",
+               "quantity": "3"
+            },
+            {
+                "name": "ac",
+                "quantity": "4"
+            },
+            {
+                "name":"tv",
+                "quantity":5
+            }
+        ]
+            },
+            {
+                aid: 2,
+                image: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                address: "Bishan Park, Block 12",
+                floor: "5th Floor",
+                door: "Unit: #05-88",
+                inventory: []
+            },
+            {
+                aid: 3,
+                image: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                address: "Bishan Park, Block 3",
+                floor: "1st Floor",
+                door: "Unit: #01-80",
+                inventory: []
+            },
+            {
+                aid: 4,
+                image: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                address: "Bishan Park, Block 3",
+                floor: "1st Floor",
+                door: "Unit: #01-88",
+                inventory: []
+            }
+        ]
       }
     })
-
     const handleClick = (id) => {
         navigateTo('/apartments/' + id)
     }
